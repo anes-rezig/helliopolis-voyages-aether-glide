@@ -5,12 +5,14 @@ const Partners = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const partners = [
-    { name: "SkyLine Airways", logo: "✈️" },
-    { name: "Cosmic Cruisers", logo: "🚀" },
-    { name: "Ocean Breeze", logo: "🛥️" },
-    { name: "Mountain Air", logo: "🏔️" },
-    { name: "Desert Wings", logo: "🦅" },
-    { name: "Arctic Express", logo: "❄️" }
+    { name: "Qatar Airways", logo: "🇶🇦" },
+    { name: "Air Algérie", logo: "🇩🇿" },
+    { name: "Emirates", logo: "🇦🇪" },
+    { name: "Air France", logo: "🇫🇷" },
+    { name: "Lufthansa", logo: "🇩🇪" },
+    { name: "Turkish Airlines", logo: "🇹🇷" },
+    { name: "British Airways", logo: "🇬🇧" },
+    { name: "Singapore Airlines", logo: "🇸🇬" }
   ];
 
   useEffect(() => {
@@ -28,7 +30,7 @@ const Partners = () => {
             Trusted Partners
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            We collaborate with the finest airlines and transport companies to ensure your journey is seamless and luxurious.
+            We collaborate with the world's leading airlines to ensure your journey is seamless and luxurious.
           </p>
         </div>
 

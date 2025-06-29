@@ -17,6 +17,13 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+      {/* Flying Airplanes */}
+      <div className="fixed inset-0 pointer-events-none z-30">
+        <div className="absolute top-1/4 left-0 text-4xl airplane-animation-1">✈️</div>
+        <div className="absolute top-1/2 left-0 text-3xl airplane-animation-2">🛩️</div>
+        <div className="absolute top-3/4 left-0 text-4xl airplane-animation-3">✈️</div>
+      </div>
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div 
@@ -38,35 +45,39 @@ const Hero = () => {
         <div className="w-full h-full bg-gradient-to-r from-transparent via-blue-500 to-transparent transform skew-y-12"></div>
       </div>
 
-      {/* Header with Logo Placeholder */}
+      {/* Header with Real Logo */}
       <header className="absolute top-0 left-0 right-0 z-50 p-6">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#FFA100] to-blue-500 rounded-lg flex items-center justify-center border-2 border-white/20 backdrop-blur-sm">
-            <span className="text-white font-bold text-xl">HV</span>
+          <div className="flex items-center space-x-4">
+            <img 
+              src="/lovable-uploads/98ca79a2-98b9-44b7-8da7-5be8b640b9a7.png" 
+              alt="Helliopolis Voyages Logo" 
+              className="h-16 w-auto object-contain"
+            />
           </div>
           <nav className="hidden md:flex space-x-8">
-            <a href="#tours" className="text-white hover:text-[#FFA100] transition-colors duration-300 font-medium">Tours</a>
-            <a href="#booking" className="text-white hover:text-[#FFA100] transition-colors duration-300 font-medium">Booking</a>
-            <a href="#partners" className="text-white hover:text-[#FFA100] transition-colors duration-300 font-medium">Partners</a>
+            <a href="#tours" className="text-white hover:text-[#FFA100] transition-colors duration-300 font-medium font-exo">Tours</a>
+            <a href="#booking" className="text-white hover:text-[#FFA100] transition-colors duration-300 font-medium font-exo">Booking</a>
+            <a href="#partners" className="text-white hover:text-[#FFA100] transition-colors duration-300 font-medium font-exo">Partners</a>
           </nav>
         </div>
       </header>
 
       {/* Main Content */}
       <div className="text-center z-10 px-4 max-w-6xl mx-auto">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-[#FFA100] bg-clip-text text-transparent animate-fade-in">
+        <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-[#FFA100] bg-clip-text text-transparent animate-fade-in font-orbitron">
           Helliopolis
         </h1>
-        <h2 className="text-4xl md:text-6xl font-light mb-8 text-blue-100 animate-fade-in delay-300">
+        <h2 className="text-4xl md:text-6xl font-light mb-8 text-blue-100 animate-fade-in delay-300 font-orbitron">
           Voyages
         </h2>
-        <p className="text-xl md:text-2xl text-blue-200 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-500">
+        <p className="text-xl md:text-2xl text-blue-200 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-500 font-exo">
           Experience unforgettable journeys through time and space. Where every destination becomes an extraordinary adventure.
         </p>
         
         <Button 
           onClick={scrollToTours}
-          className="bg-[#FFA100] hover:bg-[#FF8C00] text-black font-bold text-lg px-12 py-6 rounded-full transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-[#FFA100]/50 animate-fade-in delay-700"
+          className="bg-[#FFA100] hover:bg-[#FF8C00] text-black font-bold text-lg px-12 py-6 rounded-full transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-[#FFA100]/50 animate-fade-in delay-700 font-exo glow-animation"
         >
           Check Available Tours
           <span className="ml-2 text-2xl">🚀</span>

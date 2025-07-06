@@ -5,14 +5,12 @@ interface SectionTransitionProps {
   children: React.ReactNode;
   className?: string;
   direction?: "up" | "left" | "right";
-  delay?: number;
 }
 
 const SectionTransition = ({ 
   children, 
   className = "", 
-  direction = "up",
-  delay = 0 
+  direction = "up"
 }: SectionTransitionProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -56,9 +54,6 @@ const SectionTransition = ({
     <div
       ref={ref}
       className={`section-transition ${isVisible ? `visible ${getAnimationClass()}` : ""} ${className}`}
-      style={{
-        animationDelay: isVisible ? `${delay}ms` : '0ms'
-      }}
     >
       {children}
     </div>

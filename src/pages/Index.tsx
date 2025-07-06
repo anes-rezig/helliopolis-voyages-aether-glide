@@ -13,19 +13,19 @@ const Index = () => {
       <FlyingAirplanes />
       <Hero />
       
-      <SectionTransition direction="up" delay={200}>
+      <SectionTransition direction="up">
         <ToursGallery />
       </SectionTransition>
       
-      <SectionTransition direction="left" delay={300}>
+      <SectionTransition direction="left">
         <Partners />
       </SectionTransition>
       
-      <SectionTransition direction="right" delay={400}>
+      <SectionTransition direction="right">
         <Booking />
       </SectionTransition>
       
-      <SectionTransition direction="up" delay={500}>
+      <SectionTransition direction="up">
         <Footer />
       </SectionTransition>
     </div>

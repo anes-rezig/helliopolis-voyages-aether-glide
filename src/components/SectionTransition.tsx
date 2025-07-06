@@ -21,9 +21,7 @@ const SectionTransition = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
+          setIsVisible(true);
         }
       },
       {
@@ -41,7 +39,7 @@ const SectionTransition = ({
         observer.unobserve(ref.current);
       }
     };
-  }, [delay]);
+  }, []);
 
   const getAnimationClass = () => {
     switch (direction) {
@@ -58,6 +56,9 @@ const SectionTransition = ({
     <div
       ref={ref}
       className={`section-transition ${isVisible ? `visible ${getAnimationClass()}` : ""} ${className}`}
+      style={{
+        animationDelay: isVisible ? `${delay}ms` : '0ms'
+      }}
     >
       {children}
     </div>
